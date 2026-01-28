@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>4D Monitor Support</title>
+  <style>
+    body{
+      margin:0; font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display",Segoe UI,Roboto,Arial,sans-serif;
+      background:#f4f6fb; color:#111827;
+    }
+    .wrap{ max-width:860px; margin:0 auto; padding:48px 20px; }
+    .card{
+      background:#fff; border-radius:18px; padding:28px;
+      box-shadow:0 10px 30px rgba(0,0,0,.08);
+      border:1px solid rgba(0,0,0,.06);
+    }
+    h1{ margin:0 0 8px; font-size:28px; }
+    p{ margin:10px 0; line-height:1.6; color:#374151; }
+    .row{ margin-top:18px; padding-top:18px; border-top:1px solid rgba(0,0,0,.08); }
+    a{ color:#2563eb; text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+    .muted{ color:#6b7280; font-size:14px; }
+    .pill{
+      display:inline-block; padding:6px 10px; border-radius:999px;
+      background:#eef2ff; color:#3730a3; font-size:13px; margin-right:8px;
+    }
+    ul{ margin:10px 0 0 18px; color:#374151; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>4D Monitor Support</h1>
+      <p>Need help, found a bug, or want to suggest a feature? Contact us below.</p>
+
+      <div class="row">
+        <span class="pill">Email</span>
+        <p>
+          Contact us: <a href="mailto:support@4dmonitor.aiproton.net">support@4dmonitor.aiproton.net</a>
+        </p>
+        <p class="muted">Tip: Include your device model, iOS version, and app version for faster help.</p>
+      </div>
+
+      <div class="row">
+        <span class="pill">FAQ</span>
+        <ul>
+          <li>TestFlight install issues: update TestFlight and try reinstalling the build.</li>
+          <li>Ads not showing: this can happen on new accounts or in certain regions.</li>
+          <li>Results/insights: provided for informational purposes only.</li>
+        </ul>
+      </div>
+
+      <div class="row">
+        <span class="pill">Privacy</span>
+        <p>
+          Read our Privacy Policy here:
+          <a href="https://privacy.4dmonitor.aiproton.net/">privacy.4dmonitor.aiproton.net</a>
+        </p>
+      </div>
+
+      <p class="muted">© <span id="y"></span> 4D Monitor</p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
