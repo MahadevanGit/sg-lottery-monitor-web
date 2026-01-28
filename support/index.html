@@ -1,70 +1,211 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <title>4D Monitor – Support</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>4D Monitor Support</title>
+
+  <!-- App Icon -->
+  <link rel="icon" type="image/png"
+    href="https://raw.githubusercontent.com/MahadevanGit/4dmonitor-privacy-policy/main/4DMon_005_padded_android.jpeg">
+
   <style>
-    body{
-      margin:0; font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display",Segoe UI,Roboto,Arial,sans-serif;
-      background:#f4f6fb; color:#111827;
+    :root {
+      /* Default: dark mode */
+      --bg: #070312;
+      --text: #f5f5f5;
+      --heading: #ffffff;
+      --accent: #c5a3ff;
+      --muted: #c9c9c9;
+      --footer: #b8b8b8;
+      --border: rgba(255,255,255,0.08);
+      --card: rgba(255,255,255,0.03);
     }
-    .wrap{ max-width:860px; margin:0 auto; padding:48px 20px; }
-    .card{
-      background:#fff; border-radius:18px; padding:28px;
-      box-shadow:0 10px 30px rgba(0,0,0,.08);
-      border:1px solid rgba(0,0,0,.06);
+
+    .light-theme {
+      --bg: #ffffff;
+      --text: #111111;
+      --heading: #000000;
+      --accent: #5a2ecf;
+      --muted: #4b5563;
+      --footer: #555555;
+      --border: rgba(0,0,0,0.1);
+      --card: rgba(0,0,0,0.03);
     }
-    h1{ margin:0 0 8px; font-size:28px; }
-    p{ margin:10px 0; line-height:1.6; color:#374151; }
-    .row{ margin-top:18px; padding-top:18px; border-top:1px solid rgba(0,0,0,.08); }
-    a{ color:#2563eb; text-decoration:none; }
-    a:hover{ text-decoration:underline; }
-    .muted{ color:#6b7280; font-size:14px; }
-    .pill{
-      display:inline-block; padding:6px 10px; border-radius:999px;
-      background:#eef2ff; color:#3730a3; font-size:13px; margin-right:8px;
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      transition: background 0.3s ease, color 0.3s ease;
     }
-    ul{ margin:10px 0 0 18px; color:#374151; }
+
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 32px 16px 48px;
+    }
+
+    h1, h2, h3 {
+      color: var(--heading);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h1 img {
+      width: 38px;
+      height: 38px;
+      border-radius: 6px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      margin-top: 2rem;
+      font-size: 1.35rem;
+    }
+
+    h3 {
+      margin-top: 1.25rem;
+      font-size: 1.1rem;
+    }
+
+    a { color: var(--accent); }
+
+    .tagline {
+      color: var(--accent);
+      margin-bottom: 0.35rem;
+      font-size: 1.05rem;
+    }
+
+    .sub {
+      color: var(--muted);
+      margin: 0 0 1.5rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px 16px;
+      margin: 12px 0;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      color: var(--accent);
+      font-size: 0.85rem;
+      margin-bottom: 8px;
+    }
+
+    ul { margin-top: 8px; }
+
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--footer);
+    }
   </style>
+
+  <script>
+    // Auto theme selection based on time
+    (function applyAutoTheme() {
+      const hour = new Date().getHours();
+      const isLight = hour >= 6 && hour < 18; // 6am–6pm = Light mode
+      if (isLight) {
+        document.documentElement.classList.add("light-theme");
+      }
+    })();
+  </script>
 </head>
+
 <body>
-  <div class="wrap">
-    <div class="card">
-      <h1>4D Monitor Support</h1>
-      <p>Need help, found a bug, or want to suggest a feature? Contact us below.</p>
+  <main class="page">
+    <header>
+      <h1>
+        <img src="https://raw.githubusercontent.com/MahadevanGit/4dmonitor-privacy-policy/main/4DMon_005_padded_android.jpeg"
+             alt="*">
+        Support
+      </h1>
+      <p class="tagline">4D Monitor – Singapore Results & Insights</p>
+      <p class="sub">Need help, found a bug, or have a feature request? Contact us below.</p>
+    </header>
 
-      <div class="row">
-        <span class="pill">Email</span>
-        <p>
-          Contact us: <a href="mailto:support@4dmonitor.aiproton.net">support@4dmonitor.aiproton.net</a>
-        </p>
-        <p class="muted">Tip: Include your device model, iOS version, and app version for faster help.</p>
-      </div>
+    <section class="card">
+      <div class="pill">Contact</div>
+      <p>
+        Email: <a href="mailto:aiproton4u@gmail.com">aiproton4u@gmail.com</a>
+      </p>
+      <p class="sub" style="margin:0;">
+        For faster support, include: device model, iOS/Android version, app version, and screenshots (if any).
+      </p>
+    </section>
 
-      <div class="row">
-        <span class="pill">FAQ</span>
+    <section>
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="card">
+        <div class="pill">Live Results</div>
+        <p><strong>Why are live results not updating?</strong></p>
         <ul>
-          <li>TestFlight install issues: update TestFlight and try reinstalling the build.</li>
-          <li>Ads not showing: this can happen on new accounts or in certain regions.</li>
-          <li>Results/insights: provided for informational purposes only.</li>
+          <li>Check your internet connection.</li>
+          <li>Try closing and reopening the app.</li>
+          <li>If it still happens, email us with a screenshot + time of issue.</li>
         </ul>
       </div>
 
-      <div class="row">
-        <span class="pill">Privacy</span>
-        <p>
-          Read our Privacy Policy here:
-          <a href="https://privacy.4dmonitor.aiproton.net/">privacy.4dmonitor.aiproton.net</a>
-        </p>
+      <div class="card">
+        <div class="pill">Favourites & Sync</div>
+        <p><strong>My favourites are not syncing / missing.</strong></p>
+        <ul>
+          <li>Make sure you are signed in (Guest mode does not sync across devices).</li>
+          <li>Try sign out → sign in again.</li>
+        </ul>
       </div>
 
-      <p class="muted">© <span id="y"></span> 4D Monitor</p>
-    </div>
-  </div>
+      <div class="card">
+        <div class="pill">Ads</div>
+        <p><strong>Ads not showing?</strong></p>
+        <ul>
+          <li>Ad availability can vary by region and time.</li>
+          <li>Some users may see fewer ads depending on ad inventory.</li>
+        </ul>
+      </div>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
+      <div class="card">
+        <div class="pill">Results & Insights</div>
+        <p><strong>Are insights guaranteed?</strong></p>
+        <p class="sub" style="margin:0;">
+          No. All results, calculations, and insights are provided for informational purposes only.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Privacy Policy</h2>
+      <p>
+        Read our Privacy Policy here:
+        <a href="https://sglotterymonitor.aiproton.net/privacy/" target="_blank" rel="noopener">
+          https://sglotterymonitor.aiproton.net/privacy/
+        </a>
+      </p>
+    </section>
+
+    <footer>
+      <p>© 2025 Aiproton4U AIP. All rights reserved.</p>
+    </footer>
+  </main>
 </body>
 </html>
